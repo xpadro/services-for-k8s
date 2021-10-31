@@ -1,13 +1,13 @@
-package net.xpadro.services.k8s;
+package net.xpadro.services.k8s.crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServicesForK8sApplication {
+public class CrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServicesForK8sApplication.class, args);
+		SpringApplication.run(CrudApplication.class, args);
 	}
 
 }
