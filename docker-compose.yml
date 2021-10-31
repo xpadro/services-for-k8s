@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  crud-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-crud
+
+    container_name: crud-app
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - mongodb
+
+    networks:
+      - mongo_network
+
+  mongodb:
+    image: mongo:latest
+
+    container_name: mongodb
+
+    ports:
+      - 27017:27017
+
+    volumes:
+      - mongo_data:/data/db
+
+    networks:
+      - mongo_network
+
+volumes:
+  mongo_data:
+
+networks:
+  mongo_network:

@@ -1,14 +1,18 @@
 # CRUD App
 A simple application which stores and retrieves countries from a MongoDB database.
 
-## Setup
-In order to start a MongoDB server:
+## Execution
+Build the application:
 ```
-docker run --name mongodb -p 27017:27017 -d mongo:latest
+mvnw clean package
 ```
 
-## Execution
-Then, you can start the application and save new countries to the database using a POST request. For example, adding England:
+Build the Docker images and run the containers (app and mongoDB):
+```
+docker-compose up --build
+```
+
+Save new countries to the database using a POST request. For example, adding England:
 ```
 curl -X POST localhost:8080/countries -H 'Content-Type: application/json' -d '{"name":"England"}'
 ```
