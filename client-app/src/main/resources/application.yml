@@ -1,0 +1,2 @@
+client:
+  url: "http://crud-app:8080/countries"

@@ -18,6 +18,19 @@ services:
     networks:
       - mongo_network
 
+  client-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-client
+
+    container_name: client-app
+
+    ports:
+      - "8081:8080"
+
+    networks:
+      - mongo_network
+
   mongodb:
     image: mongo:latest
 

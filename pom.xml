@@ -6,7 +6,8 @@
 
 	<modules>
 		<module>crud-app</module>
-	</modules>
+        <module>client-app</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

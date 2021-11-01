@@ -1,0 +1,12 @@
+FROM openjdk:11-jdk
+
+VOLUME /tmp
+
+ARG JAR_FILE=client-app/target/*.jar
+ENV JAVA_OPTS=""
+
+COPY ${JAR_FILE} application.jar
+
+EXPOSE 8081
+
+ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar /application.jar"]
